@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ruse, Bulgaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #475a9a;
+            background:#f5f5ff, url('photos/ruse_background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url("photos/ruse6.jpg");
+            background-size: cover;
+            height: 250px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header::before {
+            height: 250px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(71, 90, 154, 0.7); 
+            z-index: 1;
+        }
+        header h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin: 0;
+            z-index: 2;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+       
+        /* Navigation Styles */
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #475a9a, #3b4b7a);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            text-decoration: none;
+            font-size: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+           
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* Contact Form Styles */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group label {
+            font-weight: 700;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #475a9a;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #7988bb;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            background-color: #475a9a;
+            color: white;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .btn-submit:hover {
+            background-color: #7988bb;
+        }
+
+        /* Map Styles */
+        .map {
+            margin-top: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #475a9a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #475a9a;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #7988bb;
+        }
+
+        /* FAQ Styles */
+        .faq {
+            margin-top: 40px;
+        }
+
+        .faq h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .faq p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions, feedback, or inquiries, feel free to reach out to us using the contact form below or through the information provided.</p>
+
+        <h3>Contact Information</h3>
+        <p><strong>Phone:</strong> +359 123 456 789</p>
+        <p><strong>Email:</strong> <a href="mailto:info@ruse.bg">info@ruse.bg</a></p>
+        <p><strong>Address:</strong> 123 Main Street, Ruse, Bulgaria</p>
+
+        <h3>Contact Form</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">Send Message</button>
+        </form>
+
+        <h2 class="mt-5">Our Location</h2>
+        <p>Visit us at our office or explore the beautiful city of Ruse. Use the map below for directions:</p>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2854.045579416984!2d25.968899215501925!3d43.84779427912956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa62f29af60e91%3A0x35d0a5df5d1bc46f!2sRuse%2C%20Bulgaria!5e0!3m2!1sen!2sus!4v1616774773182!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <h2 class="mt-5">Follow Us</h2>
+        <p>Stay connected with us on social media to get the latest updates, news, and events!</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ruse.municipality/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ruse.municipality/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCNXg5sroRSvBbX5g8MOiP1w" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <p><strong>Q: What are your opening hours?</strong><br>A: We are open Monday to Friday from 9 AM to 5 PM.</p>
+            <p><strong>Q: How can I book a tour?</strong><br>A: You can book a tour directly on our website or by calling us.</p>
+            <p><strong>Q: Do you offer group discounts?</strong><br>A: Yes, we offer discounts for groups of 10 or more. Please contact us for more details.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ruse Tourism Board | Get in touch with us!</p>
+    </footer>
+
+</body>
+
+</html>

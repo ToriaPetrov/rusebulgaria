@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery of Ruse, Bulgaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5ff;
+            color: #475a9a;
+        }
+        header {
+            background: url("photos/ruse6.jpg");
+            background-size: cover;
+            height: 250px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header::before {
+            height: 250px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(71, 90, 154, 0.7); 
+            z-index: 1;
+        }
+        header h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin: 0;
+            z-index: 2;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+       
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #475a9a, #3b4b7a);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            text-decoration: none;
+            font-size: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+           
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* Gallery Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            height: 210px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Overlay Styles */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(71, 90, 154, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1; /* Show on hover */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #475a9a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gallery of Ruse, Bulgaria</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="photos/ruse24.jpg" alt="Theatre rooftop">
+                <div class="overlay">
+                    <h3>Sunset Over the Theatre</h3>
+                    <p>A picturesque sunset view.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse13.jpg" alt="Sunset over the Danube River">
+                <div class="overlay">
+                    <h3>The Liberty Monument</h3>
+                    <p>A symbol of freedom and independence.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse26.jpg" alt="Sunset over the Danube River">
+                <div class="overlay">
+                    <h3>Sunset Over the Danube</h3>
+                    <p>A picturesque sunset view.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse9.jpg" alt="Dohodno Zdanie building">
+                <div class="overlay">
+                    <h3>The Opera</h3>
+                    <p>An architectural gem in Ruse.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse18.jpg" alt="Night view of Ruse">
+                <div class="overlay">
+                    <h3>Night View of Ruse</h3>
+                    <p>The city lights up beautifully at night.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse11.jpg" alt="Rock-Hewn Churches of Ivanovo">
+                <div class="overlay">
+                    <h3>Rock-Hewn Churches</h3>
+                    <p>A UNESCO World Heritage Site.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse3.jpg" alt="Ruse Museum of History">
+                <div class="overlay">
+                    <h3>Ruse Museum of History</h3>
+                    <p>Exploring the rich history of Ruse.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse22.jpg" alt="Sunset over the Danube River">
+                <div class="overlay">
+                    <h3>Sunset Over the Danube</h3>
+                    <p>A picturesque sunset view.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse5.jpg" alt="Danube River near Ruse">
+                <div class="overlay">
+                    <h3>The Library</h3>
+                    <p>A stunning building with a long of history.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse1.jpg" alt="Liberty Monument in Ruse">
+                <div class="overlay">
+                    <h3>Liberty Monument Square</h3>
+                    <p>The best place for an evening walk.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="photos/ruse4.jpg" alt="Architectural details in Ruse">
+                <div class="overlay">
+                    <h3>Architectural Details</h3>
+                    <p>Intricate designs that tell a story.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/ruse27.jpg" alt="Sunset over the Danube River">
+                <div class="overlay">
+                    <h3>Traditional Rooftop</h3>
+                    <p>Beautidul buildings in the city centre area.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ruse Tourism Board | Discover the Beauty of Ruse, Bulgaria</p>
+    </footer>
+
+</body>
+
+</html>
